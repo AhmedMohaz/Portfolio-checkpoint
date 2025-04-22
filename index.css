@@ -1,0 +1,151 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+    /* Body */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: whitesmoke;
+    color: #333;
+    padding-top: 60px;
+  }
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+  
+  /* Navbar links */
+  nav a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Hover underline */
+  nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: whitesmoke;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  /* Hover effects */
+  nav a:hover {
+    color: wheat;
+    transform: scale(1.1);
+  }
+  
+  nav a:hover::after {
+    width: 100%;
+  }
+  
+  
+  
+  /* Sections */
+  section, header, footer {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #444;
+    text-align: left;
+  }
+  
+  thead {
+    background-color: #eaeaea;
+  }
+  
+  /* Forms */
+  form input {
+    padding: 8px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 400px;
+    display: block;
+  }
+  
+  form button {
+    padding: 10px 20px;
+    background-color: #222;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  form button:hover {
+    background-color: #444;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 15px 0;
+    margin-top: 50px;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Video */
+  iframe {
+    display: block;
+    margin: 30px auto;
+    max-width: 100%;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    nav {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    form input, form button {
+      width: 100%;
+    }
+  }
+  
